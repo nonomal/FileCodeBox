@@ -1,207 +1,55 @@
 <div align="center">
-<h1>File Express Cabinet - Lite</h1>
-<h2>FileCodeBox - Lite</h2>
-<p><em>share text and files with anonymous passwords, and take files like express delivery </em></p>
+<h1>File Delivery Cabinet - Lite</h1>
+<h2>FileCodeBox-Lite</h2>
+<p><em>Anonymous passcode sharing of text and files, picking up files just like picking up express deliveries</em></p>
+<p>Join our QQ Group: 739673698</p>
 </div>
 
 ![banner](https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/static/banners/img_1.png)
 
-
 ---
 
-[简体中文](./readme.md) | [English](./readme_en.md)
+<div align="center" style="text-align: center;margin: 20px 0">
+    <a href="./readme.md">简体中文</a> | 
+    <a href="./readme_en.md">English</a> | 
+    <a href="https://github.com/vastsa/FileCodeBox/wiki/Deployment-Tutorial">Deployment Guide</a> | 
+    <a href="https://github.com/vastsa/FileCodeBox/wiki/Frequently-asked-questions">FAQ</a>
+</div>
 
-## Main features
-
-- [x] lightweight and simple: Fastapi + Sqlite3 + Vue2 + ElementUI
-- [x] easy upload: copy and paste, drag and drop
-- [x] multiple types: Text, File
-- [x] explosion Prevention: error count limit
-- [x] prevent abuse: IP address limits the number of uploads
-- [x] password sharing: random password, file access, custom times, and validity period
-- [x] anonymous sharing: no registration, no login
-- [x] management Panel: View all files and delete them
-- [x] one-click deployment: docker one-click deployment
-- [x] A variety of storage methods : Aliyun OSS、 local file flow
-
-## Deployment method
-
-### One-click Docker deployment
-
-#### AMD
-
-```bash
-docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest
-```
-
-#### ARM
-
-```bash
-docker run -d --restart=always -p 12345:12345 -v /Users/lan/soft/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:arm
-```
-
-### Update
-
-```bash
-// 找到容器ID
-docker ps -a
-// 停止容器并删除
-docker stop 容器ID && docker rm 容器ID
-// 重新运行容器
-docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest
-```
-
-### Other methods
-
-For reference only, historical version->[部署文档](https://www.yuque.com/lxyo/work/zd0kvzy7fofx6w7v)
-
-## Project Plan
-
-December 14, 2022
-This project is mainly light-weight, mainly single-user, offline environment, so there is no need to add too many
-things, so in fact, the basic functions of this project have been completed, and the rest is to maintain and improve the
-existing functions.
-
-No new major functions will be added. If there are new functions, it will be our Pro version. Of course, it will
-continue to be open source. It is an honor to be open source with @veoco. I learned from his code Many, I basically used
-the Django set before, and only used Fastapi. Many of his writing methods have benefited me a lot, and I have a deeper
-understanding of Fastapi, so I will also use Fastapi in the Pro version .
-
-According to some current feedback, I hope to add multi-user functions and multi-storage engines, etc. Welcome to
-continue to give comments and join us in joint development.
-
-If you have better ideas and suggestions, welcome to file an issue.
-
-## Preview
-
-### Demo
-
-[https://share.lanol.cn](https://share.lanol.cn)
-
-### Dark Theme
+## Screenshots
 
 <table style="width:100%">
-
 <tr style="width: 100%">
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_10.png" alt="寄文件">
-
-</td>
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_11.png" alt="寄文件">
-
-</td>
+<td style="width: 50%"><img src="./.github/images/img.png" alt="Send Files"></td>
+<td style="width: 50%"><img src="./.github/images/img_1.png" alt="Send Files"></td>
+</tr>
+<tr style="width: 100%">
+<td style="width: 50%"><img src="./.github/images/img_2.png" alt="Send Files"></td>
+<td style="width: 50%"><img src="./.github/images/img_3.png" alt="Send Files"></td>
+</tr>
+<tr style="width: 100%">
+<td style="width: 50%"><img src="./.github/images/img_4.png" alt="Send Files"></td>
+<td style="width: 50%"><img src="./.github/images/img_5.png" alt="Send Files"></td>
 </tr>
 </table>
 
-### Send
+## Key Features
 
-<table style="width: 100%">
-<tr style="width: 100%">
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_1.png" alt="寄文件">
-</td>
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_2.png" alt="寄文本">
-</td>
-</tr>
-<tr style="width: 100%;">
-<td colspan="2" style="width: 100%;">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_3.png" alt="寄文本">
-</td>
-</tr>
-</table>
+- [x] **Lightweight and Simple:** Built on Fastapi + Sqlite3 + Vue3 + ElementUI
+- [x] **Easy Upload:** Supports copy-paste and drag-and-drop selection
+- [x] **Multiple Types:** Supports text and files
+- [x] **Brute-Force Protection:** Limits on wrong attempts
+- [x] **Abuse Prevention:** IP-based upload limits
+- [x] **Passcode Sharing:** Random passcodes for storing and retrieving files, customizable retries, and expiration periods
+- [x] **Internationalization:** Supports Simplified Chinese, Traditional Chinese, English, etc.
+- [x] **Anonymous Sharing:** No registration or login required
+- [x] **Admin Panel:** View and delete files
+- [x] **One-Click Deployment:** Supports Docker one-click deployment
+- [x] **Flexible Expansion:** Supports S3 protocol and local file streams, with the ability to add new storage engines in the storage file
+- [x] **Simple and Clear:** Ideal for beginner projects
+- [x] **Terminal Download:** Terminal command `wget https://share.lanol.cn/share/select?code=83432`
 
-### Receive
-
-<table style="width: 100%">
-<tr style="width: 100%">
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_6.png" alt="取件">
-</td>
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_5.png" alt="取件码错误">
-</td>
-</tr>
-<tr style="width: 100%;">
-<td colspan="2" style="width: 100%;">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_4.png" alt="取文件">
-</td>
-</tr>
-</table>
-
-### Manage
-
-<table style="width: 100%">
-<tr style="width: 100%">
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_7.png" alt="admin">
-</td>
-<td style="width: 50%">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_12.png" alt="admin">
-</td>
-</tr>
-<tr style="width: 100%;">
-<td colspan="2" style="width: 100%;">
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_13.png" alt="admin">
-</td>
-</tr>
-</table>
-
-## Configuration file
-
-if you need to modify the configuration, you can put the file in `/opt/FileCodeBox/` directory and name it `.env` , and
-then restart the container.
-If it is not Docker, you need to create a `data` folder in the same directory as the project, and then create a `.env`
-file
-
-```dotenv
-# 端口
-PORT=12345
-# Sqlite数据库文件
-DATABASE_URL=sqlite+aiosqlite:///database.db
-# 静态文件夹
-DATA_ROOT=./static
-# 静态文件夹URL
-STATIC_URL=/static
-# 开启上传
-ENABLE_UPLOAD=True
-# 错误次数
-ERROR_COUNT=5
-# 错误限制分钟数
-ERROR_MINUTE=10
-# 上传次数
-UPLOAD_COUNT=60
-# 上传限制分钟数
-UPLOAD_MINUTE=1
-# 删除过期文件的间隔（分钟）
-DELETE_EXPIRE_FILES_INTERVAL=10
-# 管理地址
-ADMIN_ADDRESS=admin
-# 管理密码
-ADMIN_PASSWORD=admin
-# 文件大小限制，默认10MB
-FILE_SIZE_LIMIT=10
-# 网站标题
-TITLE=文件快递柜
-# 网站描述
-DESCRIPTION=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件
-# 网站关键词
-KEYWORDS=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件
-# 存储引擎
-STORAGE_ENGINE=filesystem
-# 如果使用阿里云OSS服务的话需要额外创建如下参数：
-# 阿里云账号AccessKey
-KeyId=阿里云账号AccessKey
-# 阿里云账号AccessKeySecret
-KeySecret=阿里云账号AccessKeySecret
-# 阿里云OSS Bucket的地域节点
-OSS_ENDPOINT=阿里云OSS Bucket的地域节点
-# 阿里云OSS Bucket的BucketName
-BUCKET_NAME=阿里云OSS Bucket的BucketName
-```
-
-## Status
+## Project Status
 
 ![Alt](https://repobeats.axiom.co/api/embed/7a6c92f1d96ee57e6fb67f0df371528397b0c9ac.svg "Repobeats analytics image")
 
@@ -209,22 +57,7 @@ BUCKET_NAME=阿里云OSS Bucket的BucketName
 
 [![Star History Chart](https://api.star-history.com/svg?repos=vastsa/FileCodeBox&type=Date)](https://star-history.com/#vastsa/FileCodeBox&Date)
 
-## Appreciate
-
-<table style="width: 100%">
-<tr style="width: 100%">
-<td style="width: 50%;text-align: center;">
-支付宝
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_9.png" alt="支付宝">
-</td>
-<td style="width: 50%;text-align: center">
-微信
-<img src="https://fastly.jsdelivr.net/gh/vastsa/FileCodeBox@V1.6/images/img_8.png" alt="微信">
-</td>
-</tr>
-</table>    
-
 ## Disclaimer
 
-this project is open source for learning only and cannot be used for any illegal purposes. Otherwise, you will be
-responsible for the consequences and have nothing to do with yourself. Please keep the project address. Thank you.
+This project is open-sourced for learning purposes only and shall not be used for any illegal activities. Any consequences are the sole responsibility of the user and have no
+relation to the author. Please retain the project link when using. Thank you.
